@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: MyConsulApp
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      config:
+        enabled: true
+        import: consul:config/
+        prefix: /config
+        defaultContext: application
+        profileSeparator: '/'
+      discovery:
+        enabled: true
+        register: true
+  config:
+    import: optional:consul:config/

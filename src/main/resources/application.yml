@@ -1,0 +1,12 @@
+server:
+  port: 8081
+
+logging:
+  level:
+    org.springframework.cloud.consul: DEBUG
+    org.springframework.web: DEBUG
+    org.springframework: DEBUG
+
+spring:
+  application:
+    name: MyConsul
